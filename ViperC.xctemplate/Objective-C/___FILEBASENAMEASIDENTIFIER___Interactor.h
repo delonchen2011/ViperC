@@ -11,9 +11,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ___VARIABLE_viperModuleName___Interactor : NSObject<___VARIABLE_viperModuleName___InteractorInputProtocol>
+@interface ___VARIABLE_viperModuleName___Interactor : NSObject<___VARIABLE_viperModuleName___InteractableInput>
 
-@property (nonatomic, weak, nullable) id<___VARIABLE_viperModuleName___InteractorOutputProtocol> output;
+@property (nonatomic, weak, nullable) id<___VARIABLE_viperModuleName___InteractableOutput> output;
 
 @end
 

@@ -11,6 +11,7 @@
 #import "___VARIABLE_viperModuleName___ViewController.h"
 #import "___VARIABLE_viperModuleName___Presenter.h"
 #import "___VARIABLE_viperModuleName___Router.h"
+#import "___VARIABLE_viperModuleName___Builder.h"
 
 @interface ___VARIABLE_viperModuleName___InteractorTests : XCTestCase
 
@@ -26,7 +27,7 @@
 {
     [super setUp];
     ___VARIABLE_viperModuleName___Router *router = [___VARIABLE_viperModuleName___Router new];
-    self.view = (___VARIABLE_viperModuleName___ViewController *) [___VARIABLE_viperModuleName___Router createModule];
+    self.view = (___VARIABLE_viperModuleName___ViewController *) [___VARIABLE_viperModuleName___Builder build];
     self.interactor = [[___VARIABLE_viperModuleName___Interactor alloc] init];
     self.presenter = [[___VARIABLE_viperModuleName___Presenter alloc] initWithInterface:view
                                                                              interactor:interactor

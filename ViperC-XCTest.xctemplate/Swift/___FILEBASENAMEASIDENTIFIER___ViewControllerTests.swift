@@ -13,7 +13,7 @@ import XCTest
 class ___VARIABLE_viperModuleName___ViewControllerTests: XCTestCase {
 
     func testInit() {
-        let view = ___VARIABLE_viperModuleName___Router.createModule() as? ___VARIABLE_viperModuleName___ViewController
+        let view = ___VARIABLE_viperModuleName___Builder.build() as? ___VARIABLE_viperModuleName___ViewController
         XCTAssertNotNil(view)
         XCTAssertNotNil(view.presenter)
     }

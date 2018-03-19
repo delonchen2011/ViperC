@@ -8,8 +8,8 @@
 
 import Foundation
 
-class ___VARIABLE_viperModuleName___Interactor: ___VARIABLE_viperModuleName___InteractorInputProtocol {
+class ___VARIABLE_viperModuleName___Interactor: ___VARIABLE_viperModuleName___InteractableInput {
 
-    weak var presenter: ___VARIABLE_viperModuleName___InteractorOutputProtocol?
+    weak var presenter: ___VARIABLE_viperModuleName___InteractableOutput?
 
 }

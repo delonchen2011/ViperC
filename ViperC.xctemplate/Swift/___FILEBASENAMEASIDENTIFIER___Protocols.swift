@@ -8,38 +8,38 @@
 
 import Foundation
 
-// MARK: WireFrameProtocol
+// MARK: Routing
 
-protocol ___VARIABLE_viperModuleName___WireframeProtocol: class {
+protocol ___VARIABLE_viperModuleName___Routing: class {
 
 }
 
-// MARK: PresenterProtocol
+// MARK: Presentable
 
-protocol ___VARIABLE_viperModuleName___PresenterProtocol: class {
+protocol ___VARIABLE_viperModuleName___Presentable: class {
 
-    var interactor: ___VARIABLE_viperModuleName___InteractorInputProtocol? { get set }
+    var interactor: ___VARIABLE_viperModuleName___InteractableInput? { get set }
 }
 
-// MARK: InteractorProtocol
+// MARK: Interactable
 
-protocol ___VARIABLE_viperModuleName___InteractorOutputProtocol: class {
+protocol ___VARIABLE_viperModuleName___InteractableOutput: class {
 
     /** Interactor -> Presenter */
 }
 
-protocol ___VARIABLE_viperModuleName___InteractorInputProtocol: class {
+protocol ___VARIABLE_viperModuleName___InteractableInput: class {
 
-    var presenter: ___VARIABLE_viperModuleName___InteractorOutputProtocol? { get set }
+    var presenter: ___VARIABLE_viperModuleName___InteractableOutput? { get set }
 
     /** Presenter -> Interactor */
 }
 
-// MARK: ViewProtocol
+// MARK: Viewable
 
-protocol ___VARIABLE_viperModuleName___ViewProtocol: class {
+protocol ___VARIABLE_viperModuleName___Viewable: class {
 
-    var presenter: ___VARIABLE_viperModuleName___PresenterProtocol? { get set }
+    var presenter: ___VARIABLE_viperModuleName___Presentable? { get set }
 
     /** Presenter -> ViewController */
 }

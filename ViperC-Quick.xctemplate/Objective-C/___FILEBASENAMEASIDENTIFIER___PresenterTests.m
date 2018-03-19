@@ -12,6 +12,7 @@
 #import "___VARIABLE_viperModuleName___ViewController.h"
 #import "___VARIABLE_viperModuleName___Presenter.h"
 #import "___VARIABLE_viperModuleName___Router.h"
+#import "___VARIABLE_viperModuleName___Builder.h"
 
 QuickSpecBegin(___VARIABLE_viperModuleName___PresenterTests)
 
@@ -20,7 +21,7 @@ describe(@"___VARIABLE_viperModuleName___Presenter Tests", ^{
         __block ___VARIABLE_viperModuleName___Presenter *presenter;
 
         beforeEach(^{
-            ___VARIABLE_viperModuleName___ViewController *view = (___VARIABLE_viperModuleName___ViewController *) [___VARIABLE_viperModuleName___Router createModule];
+            ___VARIABLE_viperModuleName___ViewController *view = (___VARIABLE_viperModuleName___ViewController *) [___VARIABLE_viperModuleName___Builder build];
             ___VARIABLE_viperModuleName___Interactor *interactor = [[___VARIABLE_viperModuleName___Interactor alloc] init];
             ___VARIABLE_viperModuleName___Router *router = [[___VARIABLE_viperModuleName___Router alloc] init];
             presenter = [[___VARIABLE_viperModuleName___Presenter alloc] initWithInterface:view

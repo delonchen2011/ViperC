@@ -19,7 +19,7 @@ class ___VARIABLE_viperModuleName___PresenterTests: QuickSpec {
                 var presenter: ___VARIABLE_viperModuleName___Presenter!
 
                 beforeEach {
-                    presenter = ___VARIABLE_viperModuleName___Presenter(interface: ___VARIABLE_viperModuleName___Router.createModule() as?___VARIABLE_viperModuleName___ViewController,
+                    presenter = ___VARIABLE_viperModuleName___Presenter(interface: ___VARIABLE_viperModuleName___Router.build() as?___VARIABLE_viperModuleName___ViewController,
                                                                         interactor: ___VARIABLE_viperModuleName___Interactor(),
                                                                         router: ___VARIABLE_viperModuleName___Router())
                 }

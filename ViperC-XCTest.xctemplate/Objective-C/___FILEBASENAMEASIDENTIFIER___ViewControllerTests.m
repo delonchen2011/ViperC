@@ -9,6 +9,7 @@
 #import <XCTest/XCTest.h>
 #import "___VARIABLE_viperModuleName___ViewController.h"
 #import "___VARIABLE_viperModuleName___Router.h"
+#import "___VARIABLE_viperModuleName___Builder.h"
 
 @interface ___VARIABLE_viperModuleName___ViewControllerTests : XCTestCase
 
@@ -18,7 +19,7 @@
 
 - (void)testInit
 {
-    ___VARIABLE_viperModuleName___ViewController *viewController = (___VARIABLE_viperModuleName___ViewController *) [___VARIABLE_viperModuleName___Router createModule];
+    ___VARIABLE_viperModuleName___ViewController *viewController = (___VARIABLE_viperModuleName___ViewController *) [___VARIABLE_viperModuleName___Builder build];
     XCTAssertNotNil(viewController);
 }
 

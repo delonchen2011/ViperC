@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ToDoViewController.h"
-#import "ToDoRouter.h"
+#import "ToDoBuilder.h"
 
 @interface AppDelegate ()
 
@@ -23,7 +23,7 @@
 
 - (void)createToDoView {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    ToDoViewController *todoViewController = (ToDoViewController *) [ToDoRouter createModule];
+    ToDoViewController *todoViewController = (ToDoViewController *) [ToDoBuilder build];
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:todoViewController];
     self.window.rootViewController = navigationController;
     self.window.backgroundColor = [UIColor whiteColor];

@@ -19,7 +19,7 @@ class ___VARIABLE_viperModuleName___RouterTests: QuickSpec {
                 var view: ___VARIABLE_viperModuleName___ViewController!
 
                 beforeEach {
-                    view = ___VARIABLE_viperModuleName___Router.createModule() as? ___VARIABLE_viperModuleName___ViewController
+                    view = ___VARIABLE_viperModuleName___Router.build() as? ___VARIABLE_viperModuleName___ViewController
                 }
 
                 it("should create orders module successfully", closure: {

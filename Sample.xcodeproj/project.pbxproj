@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04606325204E972C002440A9 /* ToDoBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 04606324204E972C002440A9 /* ToDoBuilder.m */; };
 		1964D3764271BFA50186AB91 /* Pods_SampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F56BED32DE1F5EAC0F233710 /* Pods_SampleTests.framework */; };
 		1C08387E1EB24753001F79F3 /* ToDoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C08387D1EB24753001F79F3 /* ToDoItem.m */; };
 		A42B3B401EB132C70040BE10 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A42B3B3F1EB132C70040BE10 /* main.m */; };
@@ -38,6 +39,8 @@
 
 /* Begin PBXFileReference section */
 		0178950376B7A35E9A03DA96 /* Pods-SampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SampleTests/Pods-SampleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		04606323204E972C002440A9 /* ToDoBuilder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToDoBuilder.h; sourceTree = "<group>"; };
+		04606324204E972C002440A9 /* ToDoBuilder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToDoBuilder.m; sourceTree = "<group>"; };
 		1C08387C1EB24753001F79F3 /* ToDoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToDoItem.h; sourceTree = "<group>"; };
 		1C08387D1EB24753001F79F3 /* ToDoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToDoItem.m; sourceTree = "<group>"; };
 		3152316536E3262F6D8BD792 /* Pods-SampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SampleTests/Pods-SampleTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -146,6 +149,8 @@
 				A42B3B721EB138D80040BE10 /* ToDoTableViewCell.xib */,
 				1C08387C1EB24753001F79F3 /* ToDoItem.h */,
 				1C08387D1EB24753001F79F3 /* ToDoItem.m */,
+				04606323204E972C002440A9 /* ToDoBuilder.h */,
+				04606324204E972C002440A9 /* ToDoBuilder.m */,
 			);
 			path = Sample;
 			sourceTree = "<group>";
@@ -382,6 +387,7 @@
 			files = (
 				A42B3B6F1EB133820040BE10 /* ToDoRouter.m in Sources */,
 				A42B3B6E1EB133820040BE10 /* ToDoPresenter.m in Sources */,
+				04606325204E972C002440A9 /* ToDoBuilder.m in Sources */,
 				1C08387E1EB24753001F79F3 /* ToDoItem.m in Sources */,
 				A42B3B761EB139190040BE10 /* ToDoTableViewCell.m in Sources */,
 				A42B3B701EB133820040BE10 /* ToDoViewController.m in Sources */,

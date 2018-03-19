@@ -8,9 +8,9 @@
 
 import UIKit
 
-class ___VARIABLE_viperModuleName___ViewController: UIViewController, ___VARIABLE_viperModuleName___ViewProtocol {
+class ___VARIABLE_viperModuleName___ViewController: UIViewController, ___VARIABLE_viperModuleName___Viewable {
 
-    var presenter: ___VARIABLE_viperModuleName___PresenterProtocol?
+    var presenter: ___VARIABLE_viperModuleName___Presentable?
 
     override func viewDidLoad() {
         super.viewDidLoad()

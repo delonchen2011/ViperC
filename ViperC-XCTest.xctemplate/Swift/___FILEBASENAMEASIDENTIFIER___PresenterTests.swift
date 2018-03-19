@@ -16,7 +16,7 @@ class ___VARIABLE_viperModuleName___PresenterTests: XCTestCase {
 
     override func setUp() {
         super.setUp()
-        presenter = ___VARIABLE_viperModuleName___Presenter(interface: ___VARIABLE_viperModuleName___Router.createModule() as?___VARIABLE_viperModuleName___ViewController,
+        presenter = ___VARIABLE_viperModuleName___Presenter(interface: ___VARIABLE_viperModuleName___Builder.build() as?___VARIABLE_viperModuleName___ViewController,
                                                             interactor: ___VARIABLE_viperModuleName___Interactor(),
                                                             router: ___VARIABLE_viperModuleName___Router())
     }

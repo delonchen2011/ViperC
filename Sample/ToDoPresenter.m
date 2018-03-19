@@ -10,9 +10,9 @@
 
 @implementation ToDoPresenter
 
-- (instancetype)initWithInterface:(id<ToDoViewProtocol>)interface
-                       interactor:(id<ToDoInteractorInputProtocol>)interactor
-                           router:(id<ToDoWireframeProtocol>)router
+- (instancetype)initWithInterface:(id<ToDoViewable>)interface
+                       interactor:(id<ToDoInteractableInput>)interactor
+                           router:(id<ToDoRouting>)router
 {
     if (self = [super init])
     {
@@ -29,7 +29,7 @@
     [self.interactor addToDoItem:item];
 }
 
-#pragma mark - ToDoInteractorOutputProtocol
+#pragma mark - ToDoInteractableOutput
 
 - (void)sendAddedItem:(ToDoItem *)item
 {

@@ -9,30 +9,30 @@
 #import <Foundation/Foundation.h>
 #import "ToDoItem.h"
 
-#pragma mark - WireFrameProtocol
+#pragma mark - Routing
 
-@protocol ToDoWireframeProtocol <NSObject>
+@protocol ToDoRouting <NSObject>
 
 @end
 
 #pragma mark - PresenterProtocol
 
-@protocol ToDoPresenterProtocol <NSObject>
+@protocol ToDoPresentable <NSObject>
 
 @end
 
 #pragma mark - InteractorProtocol
 
-@protocol ToDoInteractorOutputProtocol <NSObject>
+@protocol ToDoInteractableOutput <NSObject>
 
 - (void)sendAddedItem:(ToDoItem *)item;
 
 @end
 
-@protocol ToDoInteractorInputProtocol <NSObject>
+@protocol ToDoInteractableInput <NSObject>
 
-- (void)setOutput:(id<ToDoInteractorOutputProtocol>)output;
-- (id<ToDoInteractorOutputProtocol>)getOutputProtocol;
+- (void)setOutput:(id<ToDoInteractableOutput>)output;
+- (id<ToDoInteractableOutput>)getOutputProtocol;
 
 - (void)addToDoItem:(ToDoItem *)item;
 
@@ -40,7 +40,7 @@
 
 #pragma mark - ViewProtocol
 
-@protocol ToDoViewProtocol <NSObject>
+@protocol ToDoViewable <NSObject>
 
 - (void)showAddedItem:(ToDoItem *)item;
 

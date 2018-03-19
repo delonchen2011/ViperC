@@ -18,7 +18,7 @@ class ___VARIABLE_viperModuleName___ViewControllerTests: QuickSpec {
             var view: ___VARIABLE_viperModuleName___ViewController!
 
             beforeSuite {
-                view = ___VARIABLE_viperModuleName___Router.createModule() as? ___VARIABLE_viperModuleName___ViewController
+                view = ___VARIABLE_viperModuleName___Builder.build() as? ___VARIABLE_viperModuleName___ViewController
             }
 
             context("when created by router", {

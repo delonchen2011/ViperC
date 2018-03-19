@@ -1,7 +1,3 @@
-![License](https://img.shields.io/dub/l/vibe-d.svg)
-
-![ViperC](https://raw.githubusercontent.com/abdullahselek/ViperC/master/images/viperc_header.png)
-
 # ViperC
 Xcode template for VIPER Architecture for both Objective-C and Swift.
 
@@ -19,14 +15,10 @@ Xcode template for VIPER Architecture for both Objective-C and Swift.
 
 You can find ViperC under ```/Users/USER_NAME/Library/Developer/Xcode/Templates/File Templates/ViperC/ViperC.xctemplate```
 
-## Usage
-
-![ViperC Demo](https://raw.githubusercontent.com/abdullahselek/ViperC/master/images/demo.gif)
-
 
 ## VIPER Diagram
 
-![VIPER](https://raw.githubusercontent.com/abdullahselek/ViperC/master/images/viper.png)
+![VIPER](images/viper_.png)
 
 ## Generated Source Code
 
@@ -34,47 +26,47 @@ Example for a ToDO module:
 
 ### Protocols
 
-```
+```objc
 #pragma mark - WireFrameProtocol
 
-@protocol ToDoWireframeProtocol <NSObject>
+@protocol ToDoRouting <NSObject>
 
 @end
 
-#pragma mark - PresenterProtocol
+#pragma mark - Presentable
 
-@protocol ToDoPresenterProtocol <NSObject>
-
-@end
-
-#pragma mark - InteractorProtocol
-
-@protocol ToDoInteractorOutputProtocol <NSObject>
+@protocol ToDoPresentable <NSObject>
 
 @end
 
-@protocol ToDoInteractorInputProtocol <NSObject>
+#pragma mark - Interactable
 
-- (void)setOutput:(id<ToDoInteractorOutputProtocol>)output;
-- (id<ToDoInteractorOutputProtocol>)getOutputProtocol;
+@protocol ToDoInteractableOutput <NSObject>
+
+@end
+
+@protocol ToDoInteractableInput <NSObject>
+
+- (void)setOutput:(id<ToDoInteractableOutput>)output;
+- (id<ToDoInteractableOutput>)getOutputProtocol;
 
 @end
 
 #pragma mark - ViewProtocol
 
-@protocol ToDoViewProtocol <NSObject>
+@protocol ToDoViewable <NSObject>
 
 @end
 ```
 
 ### Interactor
 
-```
+```objc
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ToDoInteractor: NSObject<ToDoInteractorInputProtocol>
+@interface ToDoInteractor: NSObject<ToDoInteractableInput>
 
-@property (nonatomic, weak, nullable) id<ToDoInteractorOutputProtocol> output;
+@property (nonatomic, weak, nullable) id<ToDoInteractableOutput> output;
 
 @end
 
@@ -83,42 +75,38 @@ NS_ASSUME_NONNULL_END
 
 ### Presenter
 
-```
+```objc
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ToDoPresenter: NSObject<ToDoInteractorOutputProtocol>
+@interface ToDoPresenter: NSObject<ToDoInteractableOutput>
 
-@property (nonatomic, weak, nullable) id<ToDoViewProtocol> view;
-@property (nonatomic) id<ToDoInteractorInputProtocol> interactor;
-@property (nonatomic, weak) id<ToDoWireframeProtocol> router;
+@property (nonatomic, weak, nullable) id<ToDoViewable> view;
+@property (nonatomic) id<ToDoInteractableInput> interactor;
+@property (nonatomic, weak) id<ToDoRouting> router;
 
-- (instancetype)initWithInterface:(id<ToDoViewProtocol>)interface
-                       interactor:(id<ToDoInteractorInputProtocol>)interactor
-                           router:(id<ToDoWireframeProtocol>)router;
+- (instancetype)initWithInterface:(id<ToDoViewable>)interface
+                       interactor:(id<ToDoInteractableInput>)interactor
+                           router:(id<ToDoRouting>)router;
 
 @end
 
 NS_ASSUME_NONNULL_END
 ```
 
-### WireFrame
+### build
 
-```
-@interface ToDoRouter: NSObject<ToDoWireframeProtocol>
-
-@property (nonatomic, weak) ToDoViewController *viewController;
-
-+ (UIViewController *)createModule;
-
+```objc
+@interface ToDoBuilder: NSObject
++ (UIViewController *)build;
 @end
 ```
 
 ### View
 
-```
+```objc
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ToDoViewController: UIViewController<ToDoViewProtocol>
+@interface ToDoViewController: UIViewController<ToDoViewable>
 
 @property (nonatomic) ToDoPresenter *presenter;
 

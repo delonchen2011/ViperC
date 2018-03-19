@@ -12,15 +12,15 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ToDoPresenter : NSObject<ToDoInteractorOutputProtocol>
+@interface ToDoPresenter : NSObject<ToDoInteractableOutput>
 
-@property (nonatomic, weak, nullable) id<ToDoViewProtocol> view;
-@property (nonatomic) id<ToDoInteractorInputProtocol> interactor;
-@property (nonatomic, weak) id<ToDoWireframeProtocol> router;
+@property (nonatomic, weak, nullable) id<ToDoViewable> view;
+@property (nonatomic) id<ToDoInteractableInput> interactor;
+@property (nonatomic, weak) id<ToDoRouting> router;
 
-- (instancetype)initWithInterface:(id<ToDoViewProtocol>)interface
-                       interactor:(id<ToDoInteractorInputProtocol>)interactor
-                           router:(id<ToDoWireframeProtocol>)router;
+- (instancetype)initWithInterface:(id<ToDoViewable>)interface
+                       interactor:(id<ToDoInteractableInput>)interactor
+                           router:(id<ToDoRouting>)router;
 - (void)addToDoItem:(ToDoItem *)item;
 
 @end

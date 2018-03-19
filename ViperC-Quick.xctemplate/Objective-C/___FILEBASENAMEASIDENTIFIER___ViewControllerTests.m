@@ -10,15 +10,16 @@
 #import <Expecta/Expecta.h>
 #import "___VARIABLE_viperModuleName___ViewController.h"
 #import "___VARIABLE_viperModuleName___Router.h"
+#import "___VARIABLE_viperModuleName___Builder.h"
 
 QuickSpecBegin(___VARIABLE_viperModuleName___ViewControllerTests)
 
 describe(@"___VARIABLE_viperModuleName___ViewController Tests", ^{
-    describe(@"+[___VARIABLE_viperModuleName___Router createModule]", ^{
+    describe(@"+[___VARIABLE_viperModuleName___Builder build]", ^{
         __block ___VARIABLE_viperModuleName___ViewController *view;
 
         beforeSuite(^{
-            view = (___VARIABLE_viperModuleName___ViewController *) [___VARIABLE_viperModuleName___Router createModule];
+            view = (___VARIABLE_viperModuleName___ViewController *) [___VARIABLE_viperModuleName___Builder build];
         });
 
         context(@"when created by router", ^{

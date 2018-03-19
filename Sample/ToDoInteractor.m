@@ -13,12 +13,12 @@
 
 #pragma mark - InteractorProtocol
 
-- (void)setOutput:(id<ToDoInteractorOutputProtocol>)output
+- (void)setOutput:(id<ToDoInteractableOutput>)output
 {
     _output = output;
 }
 
-- (id<ToDoInteractorOutputProtocol>)getOutputProtocol
+- (id<ToDoInteractableOutput>)getOutputProtocol
 {
     return self.output;
 }

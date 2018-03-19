@@ -34,12 +34,12 @@ describe(@"ToDoPresenterTests", ^{
     __block ToDoViewController *todoViewController;
     __block ToDoItem *item;
     beforeEach(^{
-        id viewProtocolMock = OCMProtocolMock(@protocol(ToDoViewProtocol));
-        id inputProtocolMock = OCMProtocolMock(@protocol(ToDoInteractorInputProtocol));
-        id wireFrameProtocolMock = OCMProtocolMock(@protocol(ToDoWireframeProtocol));
+        id viewProtocolMock = OCMProtocolMock(@protocol(ToDoViewable));
+        id inputProtocolMock = OCMProtocolMock(@protocol(ToDoInteractableInput));
+        id RoutingMock = OCMProtocolMock(@protocol(ToDoRouting));
         presenter = [[ToDoPresenter alloc] initWithInterface:viewProtocolMock
                                                   interactor:inputProtocolMock
-                                                      router:wireFrameProtocolMock];
+                                                      router:RoutingMock];
         todoViewController = (ToDoViewController *) [ToDoRouter createModule];
         todoViewController.presenter = presenter;
         item = [[ToDoItem alloc] initWithText:@"Text" date:@"01.05.2017"];

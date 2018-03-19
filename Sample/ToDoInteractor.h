@@ -11,9 +11,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ToDoInteractor : NSObject<ToDoInteractorInputProtocol>
+@interface ToDoInteractor : NSObject<ToDoInteractableInput>
 
-@property (nonatomic, weak, nullable) id<ToDoInteractorOutputProtocol> output;
+@property (nonatomic, weak, nullable) id<ToDoInteractableOutput> output;
 
 @end
 

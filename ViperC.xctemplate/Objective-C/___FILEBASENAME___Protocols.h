@@ -8,38 +8,38 @@
 
 #import <Foundation/Foundation.h>
 
-#pragma mark - WireFrameProtocol
+#pragma mark - Routing
 
-@protocol ___VARIABLE_viperModuleName___WireframeProtocol <NSObject>
-
-@end
-
-#pragma mark - PresenterProtocol
-
-@protocol ___VARIABLE_viperModuleName___PresenterProtocol <NSObject>
+@protocol ___VARIABLE_viperModuleName___Routing <NSObject>
 
 @end
 
-#pragma mark - InteractorProtocol
+#pragma mark - Presentable
 
-@protocol ___VARIABLE_viperModuleName___InteractorOutputProtocol <NSObject>
+@protocol ___VARIABLE_viperModuleName___Presentable <NSObject>
+
+@end
+
+#pragma mark - Interactable
+
+@protocol ___VARIABLE_viperModuleName___InteractableOutput <NSObject>
 
 /** Interactor -> Presenter */
 
 @end
 
-@protocol ___VARIABLE_viperModuleName___InteractorInputProtocol <NSObject>
+@protocol ___VARIABLE_viperModuleName___InteractableInput <NSObject>
 
-- (void)setOutput:(id<___VARIABLE_viperModuleName___InteractorOutputProtocol>)output;
-- (id<___VARIABLE_viperModuleName___InteractorOutputProtocol>)getOutputProtocol;
+- (void)setOutput:(id<___VARIABLE_viperModuleName___InteractableOutput>)output;
+- (id<___VARIABLE_viperModuleName___InteractableOutput>)getOutputProtocol;
 
 /** Presenter -> Interactor */
 
 @end
 
-#pragma mark - ViewProtocol
+#pragma mark - Viewable
 
-@protocol ___VARIABLE_viperModuleName___ViewProtocol <NSObject>
+@protocol ___VARIABLE_viperModuleName___Viewable <NSObject>
 
 /** Presenter -> ViewController */
 

@@ -20,7 +20,7 @@ class ___VARIABLE_viperModuleName___InteractorTests: QuickSpec {
 
         beforeSuite {
             let router = ___VARIABLE_viperModuleName___Router()
-            view = ___VARIABLE_viperModuleName___Router.createModule() as? ___VARIABLE_viperModuleName___ViewController
+            view = ___VARIABLE_viperModuleName___Router.build() as? ___VARIABLE_viperModuleName___ViewController
             presenter = ___VARIABLE_viperModuleName___Presenter(interface: view,
                                                                 interactor: interactor,
                                                                 router: router)

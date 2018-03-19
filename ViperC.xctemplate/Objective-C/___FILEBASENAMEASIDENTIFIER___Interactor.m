@@ -10,14 +10,14 @@
  
 @implementation ___VARIABLE_viperModuleName___Interactor
 
-#pragma mark - InteractorProtocol
+#pragma mark - Interactable
 
-- (void)setOutput:(id<___VARIABLE_viperModuleName___InteractorOutputProtocol>)output
+- (void)setOutput:(id<___VARIABLE_viperModuleName___InteractableOutput>)output
 {
     _output = output;
 }
 
-- (id<___VARIABLE_viperModuleName___InteractorOutputProtocol>)getOutputProtocol
+- (id<___VARIABLE_viperModuleName___InteractableOutput>)getOutputProtocol
 {
     return self.output;
 }

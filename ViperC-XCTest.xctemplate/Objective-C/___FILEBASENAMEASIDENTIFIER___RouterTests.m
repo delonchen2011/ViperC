@@ -8,6 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import "___VARIABLE_viperModuleName___Router.h"
+#import "___VARIABLE_viperModuleName___Builder.h"
 
 @interface ___VARIABLE_viperModuleName___RouterTests : XCTestCase
 
@@ -17,7 +18,7 @@
 
 - (void)testCreateModule
 {
-    UIViewController *viewController = [___VARIABLE_viperModuleName___Router createModule];
+    UIViewController *viewController = [___VARIABLE_viperModuleName___Builder build];
     XCTAssertNotNil(viewController);
 }
 
